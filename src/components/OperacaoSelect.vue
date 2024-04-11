@@ -1,16 +1,4 @@
-<template>
-    <div>
-      <label>{{ label }}</label>
-      <select v-model="operacao" @change="atualizarOperacao">
-        <option value="+">Adição</option>
-        <option value="-">Subtração</option>
-        <option value="*">Multiplicação</option>
-        <option value="/">Divisão</option>
-      </select>
-    </div>
-  </template>
-  
-  <script>
+<script>
   export default {
     props: ['label'],
     data() {
@@ -25,8 +13,17 @@
     }
   };
   </script>
-  
-  <style scoped>
-  /* Estilos opcionais */
-  </style>
+
+<template>
+    <div>
+      <label>{{ label }}</label>
+      <select class="m-1" v-model="operacao" @change="atualizarOperacao">
+        <option value="+">Adição</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplicação</option>
+        <option value="/">Divisão</option>
+      </select>
+    </div>
+  </template>
+
   

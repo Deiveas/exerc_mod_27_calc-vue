@@ -1,15 +1,4 @@
-<template>
-    <div>
-      <numero-input label="Número 1" @numeroAtualizado="atualizarNumero1"></numero-input>
-      <numero-input label="Número 2" @numeroAtualizado="atualizarNumero2"></numero-input>
-      <operacao-select label="Operação" @operacaoAtualizada="atualizarOperacao"></operacao-select>
-      <div>
-        <h2>Resultado: {{ resultado }}</h2>
-      </div>
-    </div>
-  </template>
-  
-  <script>
+<script>
   import NumeroInput from './NumeroInput.vue';
   import OperacaoSelect from './OperacaoSelect.vue';
   
@@ -60,8 +49,15 @@
     }
   };
   </script>
-  
-  <style scoped>
-  /* Estilos opcionais */
-  </style>
+
+<template>
+    <div class="rounded bg-danger pt-4 pb-4">
+      <numero-input class="space bg-danger m-1" label="Número 1:" @numeroAtualizado="atualizarNumero1"></numero-input>
+      <numero-input class="space bg-danger m-4" label="Número 2:" @numeroAtualizado="atualizarNumero2"></numero-input>
+      <operacao-select class="space bg-danger m-4" label="Operação:" @operacaoAtualizada="atualizarOperacao"></operacao-select>
+      <div class="bg-danger">
+        <h2>Resultado: {{ resultado }}</h2>
+      </div>
+    </div>
+  </template>
   
